@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* =========================================
+   STARK ELEVATORS - FLOATING BACKGROUND
+========================================= */
+
+/* Horizontal floating animation */
+
+@keyframes starkFloatX {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(100px, -25px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* Reverse floating animation */
+
+@keyframes starkFloatReverse {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-85px, 35px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* Vertical floating animation */
+
+@keyframes starkFloatY {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(30px, -65px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* Floating circle classes */
+
+.floating-circle.circle-one {
+  animation: starkFloatX 7s ease-in-out infinite;
+}
+
+.floating-circle.circle-two {
+  animation: starkFloatReverse 9s ease-in-out infinite;
+}
+
+.floating-circle.circle-three {
+  animation: starkFloatY 6s ease-in-out infinite;
+}
+
+.floating-circle.circle-four {
+  animation: starkFloatX 8s ease-in-out infinite reverse;
+}
+
+.floating-circle.circle-five {
+  animation: starkFloatReverse 5s ease-in-out infinite;
+}
+
+.floating-circle.circle-six {
+  animation: starkFloatY 7s ease-in-out infinite;
+}
+
+.floating-circle.circle-seven {
+  animation: starkFloatX 10s ease-in-out infinite;
+}
+
+
+/* Floating square classes */
+
+.floating-square.square-one {
+  animation: starkFloatY 8s ease-in-out infinite;
+}
+
+.floating-square.square-two {
+  animation: starkFloatReverse 10s ease-in-out infinite;
+}
+
+.floating-square.square-three {
+  animation: starkFloatX 7s ease-in-out infinite;
+}
+
+.floating-square.square-four {
+  animation: starkFloatReverse 6s ease-in-out infinite;
+}
+
+
+/* Improve animation rendering */
+
+.floating-circle,
+.floating-square {
+  will-change: transform;
+}
+
+
+/* Accessibility: respect reduced-motion settings */
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-circle,
+  .floating-square {
+    animation: none !important;
+    will-change: auto;
+  }
+}
+
+@keyframes featureFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-feature-in {
+  animation: featureFadeIn 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-feature-in {
+    animation: none;
+  }
+}
+
+
+/* =========================================
+   ELEVATOR TECHNOLOGY BACKGROUND
+========================================= */
+
+.elevator-tech-bg {
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(30, 64, 175, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(220, 38, 38, 0.09),
+      transparent 40%
+    ),
+    #07132f;
+}
+
+/* =========================================
+   ANIMATED GRID
+========================================= */
+
+.tech-grid {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+
+  animation: techGridMove 35s linear infinite;
+}
+
+/* =========================================
+   FLOATING LIGHT EFFECTS
+========================================= */
+
+.tech-orb {
+  will-change: transform;
+}
+
+.tech-orb-blue {
+  animation: techOrbBlue 12s ease-in-out infinite alternate;
+}
+
+.tech-orb-red {
+  animation: techOrbRed 15s ease-in-out infinite alternate;
+}
+
+.tech-orb-light {
+  animation: techOrbLight 18s ease-in-out infinite alternate;
+}
+
+/* =========================================
+   FLOATING GEOMETRIC SHAPES
+========================================= */
+
+.tech-shape {
+  animation: techShapeFloat 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.tech-shape-one {
+  animation-delay: 0s;
+}
+
+.tech-shape-two {
+  animation-delay: -3s;
+}
+
+.tech-shape-three {
+  animation-delay: -5s;
+}
+
+.tech-shape-four {
+  animation-delay: -2s;
+}
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes techGridMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 48px 48px;
+  }
+}
+
+@keyframes techOrbBlue {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(55px, 35px, 0) scale(1.12);
+  }
+
+  100% {
+    transform: translate3d(20px, 75px, 0) scale(0.95);
+  }
+}
+
+@keyframes techOrbRed {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-45px, -35px, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(-70px, 25px, 0) scale(0.92);
+  }
+}
+
+@keyframes techOrbLight {
+  0% {
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(45px, -35px, 0);
+  }
+}
+
+@keyframes techShapeFloat {
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+
+  50% {
+    translate: 0 -22px;
+    rotate: 12deg;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-grid,
+  .tech-orb-blue,
+  .tech-orb-red,
+  .tech-orb-light,
+  .tech-shape {
+    animation: none !important;
+  }
+}
