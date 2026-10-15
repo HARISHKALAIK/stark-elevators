@@ -77,7 +77,7 @@ function Footer() {
                 href="/"
                 className="mb-5 inline-flex items-center justify-center gap-3 lg:justify-start"
               >
-                <div className="flex  items-center justify-center overflow-hidden rounded-xl bg-white p-1">
+                <div className="flex items-center justify-center overflow-hidden rounded-xl bg-white p-1">
                   <img
                     src={loo}
                     alt="STARK Next Gen Elevators"
