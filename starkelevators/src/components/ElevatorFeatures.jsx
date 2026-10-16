@@ -5,7 +5,7 @@ import {
   CheckCircle2,
   ArrowUpRight,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const ElevatorFeatures = () => {
   const operationalFeatures = [
     "Transverse Methodology (MRL)",
@@ -201,13 +201,13 @@ const ElevatorFeatures = () => {
             </p>
           </div>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex shrink-0 items-center justify-center gap-3 rounded-lg bg-red-600 px-6 py-4 font-semibold text-white transition-all duration-300 hover:bg-red-700"
           >
             Discuss Your Project
             <ArrowUpRight size={20} />
-          </a>
+          </Link>
 
         </div>
 

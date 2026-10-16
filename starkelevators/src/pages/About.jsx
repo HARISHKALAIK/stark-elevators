@@ -13,7 +13,7 @@ import {
   Building2,
   MoveUpRight,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 function About() {
   const highlights = [
     {
@@ -99,26 +99,26 @@ function About() {
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
 
-              <a
-                href="/contact"
-                className="group inline-flex w-fit items-center justify-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/20"
-              >
-                Work With Us
+             <Link
+  to="/contact"
+  className="group inline-flex w-fit items-center justify-center gap-3 rounded-full bg-red-600 px-7 py-4 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-red-700 hover:shadow-xl hover:shadow-red-600/20"
+>
+  Work With Us
 
-                <ArrowUpRight
-                  size={19}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                />
-              </a>
+  <ArrowUpRight
+    size={19}
+    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+  />
+</Link>
 
-              <a
+              {/* <a
                 href="#our-story"
                 className="inline-flex w-fit items-center justify-center gap-3 rounded-full border border-white/20 px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:border-white hover:bg-white/5"
               >
                 Discover Our Story
 
                 <ArrowRight size={18} />
-              </a>
+              </a> */}
 
             </div>
           </div>
@@ -337,8 +337,8 @@ function About() {
               and explore a solution tailored to your building.
             </p>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="group mx-auto mt-9 inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-bold text-red-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               Get in Touch
@@ -347,7 +347,7 @@ function About() {
                 size={19}
                 className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
               />
-            </a>
+            </Link>
 
           </div>
         </div>

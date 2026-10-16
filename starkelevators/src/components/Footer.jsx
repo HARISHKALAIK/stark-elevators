@@ -6,6 +6,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import loo from "../assets/logo.jpg"
+import { Link } from "react-router-dom";
 function Footer() {
   const year = new Date().getFullYear();
 
@@ -49,8 +50,8 @@ function Footer() {
               </p>
             </div>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="group relative z-10 mx-auto mt-7 inline-flex items-center gap-4 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-[#e92332] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl lg:mx-0 lg:mt-0"
             >
               Contact Our Team
@@ -58,7 +59,7 @@ function Footer() {
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#e92332] text-white transition-transform duration-300 group-hover:rotate-45">
                 <ArrowUpRight size={19} />
               </span>
-            </a>
+            </Link>
 
           </div>
         </div>

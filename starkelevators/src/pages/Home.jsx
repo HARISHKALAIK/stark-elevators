@@ -7,6 +7,7 @@ import cust from "../assets/Customized.png"
 import ElevatorFeatures from "../components/ElevatorFeatures";
 import ElevatorTechnology from "../components/ElevatorTechnology";
 
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -45,17 +46,17 @@ function Home() {
           </p>
 
           {/* Contact Button */}
-          <a
-            href="/contact"
-            className="group mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-amber-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-amber-950/30 transition-all duration-300 hover:-translate-y-1 hover:bg-amber-600 hover:shadow-xl sm:px-10 sm:text-lg"
-          >
-            Contact Us
+          <Link
+  to="/contact"
+  className="group mt-10 inline-flex items-center justify-center gap-3 rounded-full bg-amber-500 px-8 py-4 text-base font-bold text-white shadow-lg shadow-amber-950/30 transition-all duration-300 hover:-translate-y-1 hover:bg-amber-600 hover:shadow-xl sm:px-10 sm:text-lg"
+>
+  Contact Us
 
-            <ArrowRight
-              size={20}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </a>
+  <ArrowRight
+    size={20}
+    className="transition-transform duration-300 group-hover:translate-x-1"
+  />
+</Link>
 
           {/* Bottom Accent */}
           <div className="mx-auto mt-12 h-1 w-16 rounded-full bg-amber-400" />
