@@ -6,7 +6,7 @@ import Emg from "../assets/em.png"
 import cust from "../assets/Customized.png"
 import ElevatorFeatures from "../components/ElevatorFeatures";
 import ElevatorTechnology from "../components/ElevatorTechnology";
-
+import WhatsAppFloat from "../components/WhatsAppFloat";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -360,6 +360,7 @@ function Home() {
   </div>
 
 </section>
+<WhatsAppFloat />
 <ElevatorFeatures/>
 <ElevatorTechnology/>
       

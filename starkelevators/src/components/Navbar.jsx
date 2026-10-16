@@ -165,14 +165,16 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            <NavLink
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center gap-2 rounded-xl bg-red-600 px-4 py-3 font-bold text-white transition-all duration-300 hover:bg-blue-950 active:scale-95"
-            >
-              Get a Quote
-              <ArrowUpRight size={18} />
-            </NavLink>
+            <a
+  href="https://wa.me/919535977898"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={() => setMenuOpen(false)}
+  className="flex items-center justify-center gap-2 rounded-xl bg-green-500 px-4 py-3 font-bold text-white transition-all duration-300 hover:bg-green-700 active:scale-95"
+>
+  WhatsApp
+  <FaWhatsapp size={18} />
+</a>
           </div>
         </div>
       </nav>
