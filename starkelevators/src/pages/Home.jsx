@@ -13,7 +13,7 @@ function Home() {
     <main>
       {/* Hero Section */}
       <section
-        className="relative flex min-h-[calc(100vh-100px)] items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:min-h-[calc(100vh-120px)]"
+        className="relative flex min-h-[calc(100vh-100px)] items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:min-h-[calc(100vh-120px)] mt-20"
         style={{
           backgroundImage: `url(${elevatorBg})`,
           backgroundAttachment: "fixed",

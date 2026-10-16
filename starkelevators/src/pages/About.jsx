@@ -50,7 +50,7 @@ function About() {
   ];
 
   return (
-    <main className="overflow-hidden bg-white text-slate-900">
+    <main className="overflow-hidden bg-white text-slate-900 mt-20">
 
       {/* ========================================
           HERO SECTION
